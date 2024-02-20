@@ -24,7 +24,11 @@
         No goals have been added yet - please start adding some!
       </p>
       <ul v-else>
-        <li v-for="(goal, index) in goals" @click="removeGoal(index)">
+        <li
+          v-for="(goal, index) in goals"
+          :key="goal"
+          @click="removeGoal(index)"
+        >
           {{ goal }} - {{ index }}
           <input type="text" @click.stop />
           <!-- click.stop keeps the click event on the input and doesn't go all the way to the click even on the list item-->
