@@ -22,7 +22,7 @@
       <!-- When clicking "Add Task" a new task with the entered text should be added -->
       <input type="text" v-model="enteredTaskValue" />
       <button @click="addTask">Add Task</button>
-      <ul v-show="listHidden">
+      <ul v-show="listVisible">
         <li v-for="task in tasks" :key="task">{{task}}</li>
         <!-- 2) Output the list of tasks here -->
       </ul>
@@ -30,7 +30,7 @@
       <!-- BONUS: Also update the button caption -->
       <br />
       <button @click="showHideList" v-if="tasks.length > 0">
-        {{ buttonText }}
+        {{ listVisible ? "Hide List" : "Show List" }}
       </button>
     </section>
   </body>
