@@ -30,7 +30,8 @@
       <!-- BONUS: Also update the button caption -->
       <br />
       <button @click="showHideList" v-if="tasks.length > 0">
-        {{ listVisible ? "Hide List" : "Show List" }}
+        {{ buttonCaption }}
+        <!-- good case to use computed property.-->
       </button>
     </section>
   </body>

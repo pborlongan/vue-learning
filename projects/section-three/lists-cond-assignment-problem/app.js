@@ -6,6 +6,13 @@ const app = Vue.createApp({
       listVisible: false,
     };
   },
+  computed: {
+    // good case to test your knowledge on computed properties.
+    // if listVisible changes, this method will run.
+    buttonCaption() {
+      return this.listVisible ? 'Hide List' : 'Show List';
+    },
+  },
   methods: {
     addTask() {
       this.tasks.push(this.enteredTaskValue);
