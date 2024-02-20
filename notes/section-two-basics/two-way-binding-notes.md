@@ -87,7 +87,7 @@ Use for data that depends on other data
 
 Not used directly in template
 
-Allows you to run any code in reaction to some changed data (send http request..  etc.)
+Allows you to run any code in reaction to some changed data (send http request.. etc.)
 
 Use for any non-data update you want to make
 
@@ -97,3 +97,7 @@ Used the least
 
 `v-on:click` can be `@click`
 `v-bind:value` can be `:value`
+
+### Other Notes
+
+`v-model` for two-way binding, `v-bind` for one way.
